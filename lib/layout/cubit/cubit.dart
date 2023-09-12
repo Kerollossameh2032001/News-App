@@ -44,11 +44,12 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'apiKey': 'c9513cdf340f4da28926ce9d1018cced',
         },
       ).then((value) {
         allNews = value.data['articles'];
+        print(allNews);
         emit(NewsAllSuccesState());
       }).catchError((error) {
         emit(NewsAllErrorState(error));
@@ -66,7 +67,7 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'category': 'business',
           'apiKey': 'c9513cdf340f4da28926ce9d1018cced',
         },
@@ -91,7 +92,7 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'category': 'entertainment',
           'apiKey': 'c9513cdf340f4da28926ce9d1018cced',
         },
@@ -114,7 +115,7 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'category': 'health',
           'apiKey': 'c9513cdf340f4da28926ce9d1018cced',
         },
@@ -137,7 +138,7 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'category': 'science',
           'apiKey': 'c9513cdf340f4da28926ce9d1018cced',
         },
@@ -161,7 +162,7 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'category': 'sports',
           'apiKey': 'add3ecc4f2a4420f8712101f4f605441',
         },
@@ -185,7 +186,7 @@ class NewsCubit extends Cubit<NewsStates> {
       DioHelper.getData(
         url: 'v2/top-headlines',
         query: {
-          'country': 'eg',
+          'country': 'us',
           'category': 'technology',
           'apiKey': 'c9513cdf340f4da28926ce9d1018cced',
         },
